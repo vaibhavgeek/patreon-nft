@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tiers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Page</th>
+      <th>Name</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Benefits</th>
+      <th>Exclusive</th>
+      <th>Contract hash</th>
+      <th>Link</th>
+      <th>Batch hash</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tiers.each do |tier| %>
+      <tr>
+        <td><%= tier.page_id %></td>
+        <td><%= tier.name %></td>
+        <td><%= tier.from %></td>
+        <td><%= tier.to %></td>
+        <td><%= tier.benefits %></td>
+        <td><%= tier.exclusive %></td>
+        <td><%= tier.contract_hash %></td>
+        <td><%= tier.link %></td>
+        <td><%= tier.batch_hash %></td>
+        <td><%= link_to 'Show', tier %></td>
+        <td><%= link_to 'Edit', edit_tier_path(tier) %></td>
+        <td><%= link_to 'Destroy', tier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tier', new_tier_path %>

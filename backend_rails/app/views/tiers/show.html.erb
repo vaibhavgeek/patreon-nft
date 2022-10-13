@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Page:</strong>
+  <%= @tier.page_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tier.name %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @tier.from %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @tier.to %>
+</p>
+
+<p>
+  <strong>Benefits:</strong>
+  <%= @tier.benefits %>
+</p>
+
+<p>
+  <strong>Exclusive:</strong>
+  <%= @tier.exclusive %>
+</p>
+
+<p>
+  <strong>Contract hash:</strong>
+  <%= @tier.contract_hash %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @tier.link %>
+</p>
+
+<p>
+  <strong>Batch hash:</strong>
+  <%= @tier.batch_hash %>
+</p>
+
+<%= link_to 'Edit', edit_tier_path(@tier) %> |
+<%= link_to 'Back', tiers_path %>

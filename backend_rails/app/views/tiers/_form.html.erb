@@ -1,0 +1,62 @@
+<%= form_with(model: tier) do |form| %>
+  <% if tier.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tier.errors.count, "error") %> prohibited this tier from being saved:</h2>
+
+      <ul>
+        <% tier.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :page_id %>
+    <%= form.number_field :page_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :from %>
+    <%= form.number_field :from %>
+  </div>
+
+  <div class="field">
+    <%= form.label :to %>
+    <%= form.number_field :to %>
+  </div>
+
+  <div class="field">
+    <%= form.label :benefits %>
+    <%= form.text_field :benefits %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exclusive %>
+    <%= form.text_field :exclusive %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contract_hash %>
+    <%= form.text_field :contract_hash %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link %>
+    <%= form.text_field :link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :batch_hash %>
+    <%= form.text_field :batch_hash %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
